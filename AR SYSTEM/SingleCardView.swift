@@ -18,7 +18,7 @@ struct SingleCardView: View {
                 .frame(width: 356, height: 376)
                 .cornerRadius(25)
             VStack{
-                Text(text).offset(x:0,y:10).fontWeight(.bold)
+                Text(text).offset(x:0,y:10).fontWeight(.bold).foregroundColor(.white)
                 Image(text2).resizable().scaledToFit()
             }
             

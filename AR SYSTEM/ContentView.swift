@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
+import SceneKit
 
 struct ContentView: View {
+    @State var scene: SCNScene? = .init(named: "Heart.scn")
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            CustomSceneView(scene: $scene).frame(height: 300)
         }
         .padding()
     }
