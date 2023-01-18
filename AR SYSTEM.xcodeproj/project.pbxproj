@@ -16,6 +16,8 @@
 		4B4F5B5A2925998E00216787 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F5B592925998E00216787 /* SingleCardView.swift */; };
 		4B4F5B5C29259CB700216787 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F5B5B29259CB700216787 /* DetailView.swift */; };
 		4B5E88B5292E6B9E00E39BB2 /* Brain.scn in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E88B4292E6B9E00E39BB2 /* Brain.scn */; };
+		4B68774329771F6C005A0D28 /* IpadCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68774229771F6C005A0D28 /* IpadCarouselView.swift */; };
+		4B68774529773495005A0D28 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68774429773495005A0D28 /* Model.swift */; };
 		4BD48E9C29268E6900A0971D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD48E9B29268E6900A0971D /* CarouselView.swift */; };
 		4BDD3DC6292BCD23001735BA /* CustomSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD3DC5292BCD23001735BA /* CustomSceneView.swift */; };
 		4BDD3DC8292BCE1F001735BA /* Heart.scn in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD3DC7292BCE1F001735BA /* Heart.scn */; };
@@ -34,6 +36,8 @@
 		4B4F5B592925998E00216787 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		4B4F5B5B29259CB700216787 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4B5E88B4292E6B9E00E39BB2 /* Brain.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Brain.scn; sourceTree = "<group>"; };
+		4B68774229771F6C005A0D28 /* IpadCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpadCarouselView.swift; sourceTree = "<group>"; };
+		4B68774429773495005A0D28 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4BD48E9B29268E6900A0971D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		4BDD3DC5292BCD23001735BA /* CustomSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSceneView.swift; sourceTree = "<group>"; };
 		4BDD3DC7292BCE1F001735BA /* Heart.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Heart.scn; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		4B4F5B3929253AAC00216787 = {
 			isa = PBXGroup;
 			children = (
+				4B68774429773495005A0D28 /* Model.swift */,
 				4BDD3DCF292CF321001735BA /* Lungs.scn */,
 				4B5E88B4292E6B9E00E39BB2 /* Brain.scn */,
 				4BDD3DC7292BCE1F001735BA /* Heart.scn */,
@@ -74,6 +79,7 @@
 		4B4F5B4429253AAC00216787 /* AR SYSTEM */ = {
 			isa = PBXGroup;
 			children = (
+				4B68774229771F6C005A0D28 /* IpadCarouselView.swift */,
 				4B4F5B4529253AAC00216787 /* AR_SYSTEMApp.swift */,
 				4BDD3DCB292CE8C3001735BA /* AR_View.swift */,
 				4BDD3DC5292BCD23001735BA /* CustomSceneView.swift */,
@@ -178,6 +184,8 @@
 				4BD48E9C29268E6900A0971D /* CarouselView.swift in Sources */,
 				4B4F5B5A2925998E00216787 /* SingleCardView.swift in Sources */,
 				4BDD3DC6292BCD23001735BA /* CustomSceneView.swift in Sources */,
+				4B68774529773495005A0D28 /* Model.swift in Sources */,
+				4B68774329771F6C005A0D28 /* IpadCarouselView.swift in Sources */,
 				4B4F5B4629253AAC00216787 /* AR_SYSTEMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

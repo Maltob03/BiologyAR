@@ -20,10 +20,10 @@ struct PremiumView: View {
                 ZStack{
                     Rectangle()
                         .fill(PremiumColor)
-                        .frame(width: 161, height: 77)
+                        .frame(width: 161, height: 140)
                         .cornerRadius(25)
                     Text(PremiumText1).fontWeight(.bold)
-                }.padding(.horizontal)//End of ZStack
+                }.padding()
                     .onTapGesture {
                         ShowAlert = true
                     }
@@ -35,10 +35,10 @@ struct PremiumView: View {
                 ZStack{
                     Rectangle()
                         .fill(PremiumColor)
-                        .frame(width: 161, height: 77)
+                        .frame(width: 161, height: 140)
                         .cornerRadius(25)
                     Text(PremiumText2).fontWeight(.bold)
-                }.padding(.horizontal)
+                }.padding()
                     .onTapGesture {
                         ShowAlert = true
                     }

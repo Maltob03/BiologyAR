@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct SingleCardView: View {
-    @State var text: String
-    @State var text2: String
+    @State var HeaderTextSquare: String
+    @State var ImageAssetName: String
     @State var color: Color
     var body: some View {
         ZStack{
             Rectangle()
                 .fill(color)
-                .frame(width: 356, height: 376)
+                .frame(width: 350, height: 376)
                 .cornerRadius(25)
             VStack{
-                Text(text).offset(x:0,y:10).fontWeight(.bold).foregroundColor(.white)
-                Image(text2).resizable().scaledToFit()
+                Text(HeaderTextSquare).fontWeight(.bold).foregroundColor(.white).padding()
+                Image(ImageAssetName).resizable().scaledToFit()
             }
             
-        }
+        }.padding()
     }
 }
 
 struct SingleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleCardView(text: "Circulatory System", text2: "heart", color: CustomColor.myColor)
+        SingleCardView(HeaderTextSquare: "Circulatory System", ImageAssetName: "heart", color: CustomColor.myColor)
     }
 }

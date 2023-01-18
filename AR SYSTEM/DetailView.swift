@@ -9,40 +9,36 @@ import SwiftUI
 import SceneKit
 
 struct DetailView: View {
-    @State var DetailColor: Color
-    @State var ModelImage: String
-    @State var ModelName: String
-    @State var ModelText: String
-    @State var NavigationOrgan: String
-    @State var scene: SCNScene?
-    @State var organ: String
+    @State var DetailColor: Color //Backgorund Color in the DetailView
+    @State var TitleDetailView: String //Name of the System
+    @State var OrganDescription: String //Description of the System
+    @State var scene: SCNScene? //object for AR/3D render
+    @State var organ: String //name of the OBJECT
     @State var scene2: SCNScene?
-    @State private var isPresented = false
+    @State private var isPresented = false //var for the modal
     
-    init(DetailColor: Color, ModelImage: String, ModelName: String, ModelText: String, NavigationOrgan: String, scene: SCNScene? = nil, organ: String) {
+    init(DetailColor: Color, ModelName: String, ModelText: String, scene: SCNScene? = nil, organ: String) {
         self.DetailColor = DetailColor
-        self.ModelImage = ModelImage
-        self.ModelName = ModelName
-        self.ModelText = ModelText
-        self.NavigationOrgan = NavigationOrgan
-        self.scene = SCNScene(named: organ)
-        self.scene2 = SCNScene(named: organ)
-        self.organ = organ
+        
+        self.TitleDetailView = ModelName
+        self.OrganDescription = ModelText
+        self.scene = SCNScene(named: organ) //This type of inizialization allow me to pass the correct OBJECT in the detailView
+        self.scene2 = SCNScene(named: organ) //unused
+        self.organ = organ //The name of the 3D model that is passed to the SCNScene Object
         self.isPresented = isPresented
     }
     
     
     var body: some View {
         ScrollView{
-            NavigationView{
                 VStack{
                     ZStack{
                         Rectangle().fill(DetailColor).frame(height:400).cornerRadius(25.0).padding()
                         //ARView(scene: $scene).frame(height: 300)
-                        CustomSceneView(scene: $scene).frame(height: 250)
+                        CustomSceneView(scene: $scene).frame(height: 300)
                     }//End ZStack
                         HStack{
-                            Text(ModelName).bold().font(.system(size: 20.8))
+                            Text(TitleDetailView).bold().font(.system(size: 20.8))
                             
                             Spacer()
                             
@@ -75,11 +71,10 @@ struct DetailView: View {
                     
                 }//End VStack
                 
-            }.navigationTitle(NavigationOrgan)//End Navigation View
             Divider()
             VStack{
                     
-                    Text(ModelText).fixedSize(horizontal: false, vertical: true)
+                    Text(OrganDescription).fixedSize(horizontal: false, vertical: true)
                     
                 
             }.padding()
@@ -90,6 +85,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(DetailColor: CustomColor.myColor2, ModelImage: "heart", ModelName: "Circulatory System",ModelText: "PROVA PROVA PROVA",NavigationOrgan: "Heart", organ: "Heart.scn")
+        DetailView(DetailColor: CustomColor.myColor2,ModelName: "Circulatory System",ModelText: "PROVA PROVA PROVA", organ: "Heart.scn")
     }
 }

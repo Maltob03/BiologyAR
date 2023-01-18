@@ -4,10 +4,7 @@
 //
 //  Created by Matteo Altobello on 16/11/22.
 //
-//TODO:
-//PERFECTING SEARCHBAR
-//3D MODEL
-//AR
+
 
 
 import SwiftUI
@@ -20,29 +17,37 @@ struct CustomColor {
 }
 
 struct CardView: View {
-    @State private var searchText = ""
     @State private var index = 0
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     var body: some View {
         NavigationView(){
             ScrollView(.vertical){
-                Spacer().frame(height: 30)
                 VStack{
-                    CarouselView()
-                    Spacer().frame(height:50)
-                    Text("Premium Assets")
+                    if(horizontalSizeClass == .compact){
+                        CarouselView().padding(.top)
+                    }
+                    else {
+                        IpadCarouselView()
+                    }
+                    HStack{
+                        Text("Section").padding()
+                        Spacer()
+                    }
                         .font(.system(size: 20.8))
                         .bold()
-                        .position(x:100, y: 0)
-                    PremiumView(PremiumText1: "Skeleton 2,99$", PremiumText2: "Skeleton 1,99$",PremiumColor: CustomColor.myColor2, ShowAlert: false)
-                    PremiumView(PremiumText1: "Skeleton 2,99$", PremiumText2: "Skeleton 1,99$",PremiumColor: CustomColor.myColor3, ShowAlert: false)
-                    
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            PremiumView(PremiumText1: "Testa", PremiumText2: "Tronco",PremiumColor: CustomColor.myColor3, ShowAlert: false)
+                            PremiumView(PremiumText1: "Arto Superiore", PremiumText2: "Arto Inferiore",PremiumColor: CustomColor.myColor, ShowAlert: false)
+                        }
+                        }
                 }//End VStack
                 
             }.navigationTitle("BioReality")
-                .searchable(text: $searchText)
+                
             //End ScrollView
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
